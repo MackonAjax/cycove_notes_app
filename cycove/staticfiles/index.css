@@ -1,0 +1,75 @@
+body{
+    background-color: rgb(132, 161, 147);
+}
+
+.flexbox-container{
+    display: flex;
+    flex-wrap: wrap;
+    background-color: green;
+    min-height: 150px;
+    padding: 10px;
+    align-items: center;
+    justify-content: center;
+}
+.flexbox-item{
+    width: 100px;
+    margin: 20px;
+}
+
+.flexbox-item-1{
+    max-width: 400px;
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+.flexbox-item-2{
+    min-width: 100px;
+}
+
+.flexbox-item-1 h1{
+    color: aliceblue;
+}
+
+.flexbox-item-2 a{
+    height: 100px;
+    width: 100px;
+    color: green;
+    background-color: turquoise;
+    border-radius: 10px;
+}
+
+
+.note-box-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note-box{
+    height: auto;
+    padding: 5px 2px 5px 10px;
+    background-color: rgb(151, 185, 163);
+    width: 80%;
+    max-width: 600px;
+    margin-top: 10px;
+    color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+.note-box a{
+    text-decoration: None;
+    color: white;
+}
+
+
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: green;
+    margin-top: 20px;
+    color: white;
+}

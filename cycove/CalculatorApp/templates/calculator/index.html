@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cycove-Calculator</title>
+
+    <style>
+        body{
+            background-color: rgb(211, 221, 219);
+        }
+        .calculator-container{
+            display: flex;
+            flex-direction: column;
+            height: auto;
+            width: auto;
+            margin: 10vw;
+            background-color: green;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+        }
+        #screen1{
+            height: 50px;
+            width: 70vw;
+            background-color: white;
+            border: 0px;
+        }
+        #screen2{
+            height: 50px;
+            width: 70vw;
+            background-color: white;
+            border: 0px;
+            
+        }
+        .calculator-container button{
+            height: 100px;
+            width: 100px;
+            margin: 5px;
+        }
+        .buttons{
+            display: table;
+            columns: 3;
+        }
+    </style>
+
+
+</head>
+<body>
+    <h1>The Cycove Calculator</h1>
+
+    <div class="calculator-container">
+        {% if error %}
+            {{ error }}
+        {% endif %}
+        <form method="post" action="{% url 'calculator:index' %}">
+            {% csrf_token %}
+            <input type="text" id="screen1" name="screen1">
+            <div id="screen2" name="screen2">{{ answer }}</div>
+        
+            <div class="buttons">
+                <button>9</button>
+                <button>8</button>
+                <button>7</button>
+                <button>6</button>
+                <button>5</button>
+                <button>4</button>
+                <button>3</button>
+                <button>2</button>
+                <button>1</button>
+                <button>0</button>
+                <input type="submit" value="submit">
+            </div>
+
+        </form>
+    </div>
+</body>
+</html>
+
