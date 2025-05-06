@@ -23,9 +23,9 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'django-insecure-vvm!+ml$4s(^pp(!!@y&!ej3ns=m2#13zz(a347y7#*5fry8ge'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = ['192.168.248.237', '127.0.0.1', 'localhost', '.ngrok-free.app']
+ALLOWED_HOSTS = ['cycovenotes.onrender.com',  'cycove*.onrender.com']
 
 
 # Application definition
@@ -37,7 +37,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'Notes1.apps.Notes1Config',
+    'Notes1.apps.Notes1Config'
     'CalculatorApp',
 ]
 
