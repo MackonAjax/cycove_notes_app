@@ -1,0 +1,59 @@
+body{
+    background-color: rgb(132, 161, 147);
+}
+
+.mother-div{
+    width: 90%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: white;
+}
+
+.notes-1{
+    background-color: green;
+    height: 100px;
+    width: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.top-div{
+    min-width: 200px;
+    height: 50px;
+    width: 90%;
+    background-color: rgb(155, 189, 172);
+    margin: 10px 2px 5px 2px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding-left: 20px;
+    padding-right: 20px;
+}
+
+.lower-div{
+    min-width: 200px;
+    width: 80%;
+    min-height: 200px;
+    margin: 10px 2px 5px 2px;
+    padding: 10PX;
+    background-color: rgb(155, 189, 172);
+}
+
+#time{
+    font-style: italic;
+}
+
+.footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 200px;
+    width: 100%;
+    background-color: green;
+    margin-top: 20px;
+    color: white;
+}

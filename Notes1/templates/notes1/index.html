@@ -1,0 +1,45 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes</title>
+
+    {% load static %}
+    <link rel="stylesheet" href={% static "index.css" %}>
+</head>
+<body>
+
+    <div class="flexbox-container">
+        <div class="flexbox-item flexbox-item-1">
+            <h1>All Your Notes In One Place</h1>
+        </div>
+        <div class="flexbox-item flexbox-item-2">
+            <a href="{% url 'notes1:add' %}"></a>
+        </div>
+    </div>
+
+    <div class="note-box-container">
+
+        {% if notes %}
+            {% for note in notes %}
+                <div class="note-box">
+                    <a href="{% url 'notes1:detail' note.id%}">
+                        <h2>{{note.title}}</h2>
+                        <h3>{{note.detail|truncatewords:10}}</h3>
+                    </a>
+                    
+                </div>
+            {% endfor %}
+        {% endif %}
+
+        
+    </div>
+    
+
+    <footer class="footer">
+        <h1>CYCOVE CODERS</h1>
+    </footer>
+</body>
+</html>

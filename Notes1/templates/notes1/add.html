@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>New Note</title>
+
+    {% load static %}
+    <link rel="stylesheet" href={% static "add.css" %}>
+</head>
+<body>
+    
+    <form action="{% url 'notes1:add' %}" method="post" class="form">
+        {% csrf_token %}
+        <h2>A New Note</h2>
+        <input type="text" id="text_input" name="title" placeholder="Title">
+        <textarea id="detail" name="detail_text"  placeholder="Content"></textarea>
+    
+        <input type="submit" value="Save" class="submit">
+    </form>
+
+    <footer class="footer">
+        <h1>CYCOVE CODERS</h1>
+    </footer>
+</body>
+</html>
+
+

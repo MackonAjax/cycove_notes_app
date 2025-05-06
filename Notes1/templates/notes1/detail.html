@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Notes1-{{note.title}}</title>
+
+    {% load static %}
+    <link rel="stylesheet" href={% static "detail.css" %}>
+</head>
+<body>
+    <div class="mother-div">
+        <div class="notes-1">
+            <h1>NOTES1</h1>
+        </div>
+
+        <div class="top-div">
+            <a href="{% url 'notes1:index' %}">Back</a>
+            <p></p>
+            <form action="{% url 'notes1:delete' note.id %}" method="post">
+                {% csrf_token %}
+                <input type="hidden" name="delete" value="{{note.id}}">
+                <input type="submit" value="Delete Record">
+            </form>
+        </div>
+
+        <div class="lower-div">
+            <p id="time"> {{ note.time }} </p>
+            <h1>{{note.title}}</h1>
+            <p>{{ note.detail }}</p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <h1>CYCOVE CODERS</h1>
+    </footer>
+    
+</body>
+</html>
